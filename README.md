@@ -14,6 +14,7 @@ A simple and intuitive To-Do application built with **Angular** and **Firestore*
 
 ## Demo
 ![image](https://github.com/user-attachments/assets/3add1e33-b498-475e-8547-f50140892d63)
+![image](https://github.com/user-attachments/assets/299c7072-faaa-4118-a641-d8bf51186c49)
 
 
 ## Prerequisites
