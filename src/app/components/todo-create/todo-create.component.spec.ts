@@ -35,7 +35,14 @@ describe('TodoCreateComponent', () => {
       providers: [
         provideNativeDateAdapter(),
         provideAnimationsAsync(),
-        provideFirebaseApp(() => initializeApp({ "projectId": "angular-todo-app-27115", "appId": "1:135850969668:web:af10f22d6a3893acf08a11", "storageBucket": "angular-todo-app-27115.firebasestorage.app", "apiKey": "AIzaSyCEmhtFhlnlvSYgOra8UOTc_i1lxZOA67E", "authDomain": "angular-todo-app-27115.firebaseapp.com", "messagingSenderId": "135850969668" })),
+        provideFirebaseApp(() => initializeApp({
+          "projectId": "your-project-id",
+          "appId": "your-app-id",
+          "storageBucket": "your-storage-bucket",
+          "apiKey": "your-api-key",
+          "authDomain": "your-api-key",
+          "messagingSenderId": "your-messaging-sender-id"
+        })),
         provideFirestore(() => getFirestore()),
         { provide: TodoService, useValue: mockTodoService },
         { provide: MatBottomSheetRef, useValue: mockBottomSheetRef },
