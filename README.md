@@ -27,7 +27,7 @@ Follow these steps to set up the project locally.
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/tech-design-pilot/angular-firestore-todo-app.git
-cd angular-firestore-todo
+cd angular-firestore-todo-app
 ```
 
 ### 2. Install Dependencies
