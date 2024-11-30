@@ -1,0 +1,26 @@
+.todo-item-container,
+.todo-list-container {
+    border-radius: 10px;
+}
+
+.completed-todo {
+    text-decoration: line-through;
+}
+
+.todo-list-container {
+    height: calc(100vh - 70px);
+    overflow: auto;
+}
+
+.add-todo-button {
+    position: absolute;
+    bottom: 30px;
+    right: 45px;
+}
+
+::ng-deep .mat-bottom-sheet-container-large,
+::ng-deep .mat-bottom-sheet-container-xlarge,
+::ng-deep .mat-bottom-sheet-container-medium {
+    min-width: 1320px !important;
+    width: 100%;
+}

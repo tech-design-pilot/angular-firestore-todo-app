@@ -1,0 +1,32 @@
+<div class="container position-relative">
+    <h1>
+        To-Do App
+    </h1>
+    <div class="todo-list-container mat-elevation-z3 p-3">
+        <div class="todo-item-container mat-elevation-z2 p-2 d-flex gap-2" *ngFor="let item of todoList">
+            <mat-icon *ngIf="!item.completed" role="button"
+                (click)="markAsCompleted(item)">radio_button_unchecked</mat-icon>
+            <mat-icon *ngIf="item.completed" class="text-primary" role="button"
+                (click)="markAsInCompleted(item)">check_circle</mat-icon>
+            <div>
+                <p class="mb-1 fw-bold" [ngClass]="{'completed-todo': item.completed}">
+                    {{item.title}}
+                </p>
+                <small>
+                    Due: {{item.dueDate | date:'medium'}}
+                    Priority: <span class="badge rounded-pill"
+                        [ngClass]="{'bg-danger': item.priority === 'High', 'bg-success': item.priority === 'Medium', 'bg-primary': item.priority === 'Low'}">
+                        {{item.priority}}
+                    </span>
+                </small>
+            </div>
+            <button mat-icon-button class="ms-auto text-danger" (click)="deleteTodo(item)">
+                <mat-icon>highlight_off</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <button mat-fab class="add-todo-button" (click)="addNewTodo()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
